@@ -78,7 +78,7 @@ player.on_signal("PropertiesChanged") {|i,property|
   t += length.div(1000000)
   length = t.strftime("%-M:%S")
 
-  post = "I'm listening to #{title} by #{artist} on #{album} (#{length}) ♪ #nowplaying".force_encoding("UTF-8")
+  post = "#nowplaying I'm listening to #{title} by #{artist} on #{album} (#{length}) ♪".force_encoding("UTF-8")
   # cut strings when strings to post is over 140
   if post.length > 140
     post = post.slice(0, 137) + '...'
